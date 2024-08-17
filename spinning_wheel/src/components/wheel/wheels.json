@@ -1,0 +1,51 @@
+[
+    {
+        "id":"1",
+        "title": "rant wheel",
+       "strokeColor":"#000000",
+       "textColor": "#fff",
+       "strokeWidth": 40,
+       "radius": 200,
+       "spinLength": 200000,
+       "minSpin": 3,
+       "slowDown": 1.8,
+       "values": [
+            {
+                "id": "1",
+                "value": "hello",
+                "wheel_id": "1",
+                "sliceColor": "red",
+                "textColor":"#fff"
+            },
+            {
+                "id": "2",
+                "value": "beep",
+                "wheel_id": "1",
+                "sliceColor": "red",
+                "textColor":"#fff"
+            },
+            {
+                "id": "3",
+                "value": "jam",
+                "wheel_id": "1",
+                "sliceColor": "red",
+                "textColor":"#fff"
+            },
+            {
+                "id": "4",
+                "value": "camble",
+                "wheel_id": "1",
+                "sliceColor": "red",
+                "textColor":"#fff"
+            },
+            {
+                "id": "5",
+                "value": "hort",
+                "wheel_id": "1",
+                "sliceColor": "red",
+                "textColor":"#fff"
+            }
+       ]
+
+    }
+]

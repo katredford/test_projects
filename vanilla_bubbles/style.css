@@ -6,5 +6,11 @@
 
 
 #canvas {
-    background: #00b4ff;
+    /* background: #00b4ff; */
+    background: #ff00e62e;
+  }
+
+  .canvasBox {
+    width: 500px;
+    height: 600px;
   }

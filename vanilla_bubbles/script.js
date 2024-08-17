@@ -1,22 +1,22 @@
 const canvas = document.querySelector('#canvas');
 const context = canvas.getContext('2d')
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
 
 
 
 const particleArray = [];
 let x,y;
 
-const handleDrawCircle= (event) => {
-    event.preventDefault()
-    x = event.pageX;
-    y = event.pageY;
+// const handleDrawCircle= (event) => {
+//     event.preventDefault()
+//     x = event.pageX;
+//     y = event.pageY;
     
-    const particle = new Particle(x, y);
-    particleArray.push(particle);
-};
+//     const particle = new Particle(x, y);
+//     particleArray.push(particle);
+// };
 
 
 const createParticle = () => {
@@ -35,7 +35,7 @@ const animate = () => {
 //    })
 
 particleArray.forEach((particle, index) => {
-    // particle.move();
+    particle.move();
     particle.draw();
 
     // Remove particles that are off the top of the canvas
@@ -51,9 +51,9 @@ class Particle {
     constructor(x=0, y=0){
         this.x =x;
         this.y =y;
-        this.radius = Math.random() *50;
-        this.dx = Math.random() * 3;
-        this.dy = Math.random() *7;
+        this.radius = Math.random() *10;
+        this.dx = Math.random() * .5;
+        this.dy = Math.random() * 3;
         this.color = "white";
     }
   
@@ -64,16 +64,29 @@ class Particle {
         context.stroke();
 
         const gradient = context.createRadialGradient(
+            // this.x,
+            // this.y,
+            // 1,
+            // this.x + 0.5,
+            // this.y + 0.5,
+            // this.radius
+
             this.x,
             this.y,
-            1,
-            this.x + 0.5,
-            this.y + 0.5,
-            this.radius
+            this.radius,
+            this.x,
+            this.y,
+            0
           );
           
-          gradient.addColorStop(0.9, 'rgba(255, 255, 255, 0.3)');
-          gradient.addColorStop(0.50, '#e7feff');
+        //   gradient.addColorStop(0.3, 'rgba(255, 255, 255, 0.3)');
+        //   gradient.addColorStop(0.95, '#e7feff');
+
+        gradient.addColorStop(0, 'rgba(255, 255, 255, 0.6)');
+        gradient.addColorStop(0.2, 'rgba(255, 255, 255, 0.4)');
+        // gradient.addColorStop(0.4, 'rgba(255, 255, 255, 0.2)');
+        // gradient.addColorStop(0.6, 'rgba(231, 254, 255, 0.2)');
+        gradient.addColorStop(1, 'rgba(231, 254, 255, 0)');
           
           context.fillStyle = gradient;
 
@@ -87,8 +100,8 @@ class Particle {
     }
 }
 
-// setInterval(createParticle, 500);
+setInterval(createParticle, 200);
 
 animate();
 
-canvas.addEventListener('click', handleDrawCircle);
+// canvas.addEventListener('click', handleDrawCircle);
