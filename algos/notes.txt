@@ -1,0 +1,3 @@
+
+to type check without compiling:
+npx ts-node example.ts
