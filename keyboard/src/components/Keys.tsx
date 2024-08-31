@@ -9,7 +9,10 @@ const Keys: React.FC<KeysProps> = ({char, onClick}) => {
 
     return(
         <>
-        <button onClick={() => onClick(char)}>{char}</button>
+        <button 
+        className="keys"
+        onClick={() => onClick(char)}>{char}
+        </button>
         </>
     )
 };

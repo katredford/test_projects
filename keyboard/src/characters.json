@@ -24,7 +24,5 @@
     { "id": 23, "letter": "W" },
     { "id": 24, "letter": "X" },
     { "id": 25, "letter": "Y" },
-    { "id": 26, "letter": "Z" },
-    { "id": 27, "letter": "BACK" },
-    { "id": 28, "letter": "ENTER" }
+    { "id": 26, "letter": "Z" }
 ]
