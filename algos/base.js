@@ -1,4 +1,123 @@
 
+const maxSubArray = (nums) => {
+    let currentSum = nums[0];
+    let maxSum = nums[0];
+
+    for(let i=1; 1< nums.length; i++) {
+
+    }
+}
+
+
+
+const nums = [2, -3, 4, -2, 2, 1, -1, 4];
+console.log(maxSubArray(nums));
+
+// function twoSum(nums, target) {
+
+//     let addIndex = 0;
+//     const sumTarget = [];
+//     for(let i=1; i < nums.length; i++){
+//         // console.log(nums[addIndex] + nums[i])
+//         if(nums[addIndex] + nums[i] === target){
+//             // return [addIndex, i];
+//             sumTarget.push(addIndex, i)
+//         }
+//         addIndex++;
+//     }
+//         return sumTarget;
+// }
+
+
+const twoSum = (nums, target) => {
+
+    const adder = {};
+
+    for(let i = 0; i < nums.length; i++) {
+        const difference = target - nums[i];
+
+        console.log("adderdifference", adder[difference])
+        // // Check if the difference exists in the hashmap
+        // if (adder[difference] !== undefined) {
+        //     // If it exists, return the indices of the two numbers
+        //     return [adder[difference], i];
+        // }
+
+        if( adder.hasOwnProperty(difference)){
+            return [adder[difference], i]
+        }
+        adder[nums[i]] = i; 
+        
+    }
+
+    // console.log("adder",adder);
+    return [];
+}
+// const nums = [3,4,5,6]
+// const target = 7
+
+// // const nums = [5,4,6]
+// // const target = 10
+//* console.log(twoSum(nums, target))
+
+
+//! hashmap
+//https://neetcode.io/problems/is-anagram
+const isAnagram = (s,t) => {
+
+    if (s.length !== t.length){
+        return false;
+    }
+
+    const charCount = {};
+
+    for (let char of s) {
+
+        //? if(charCount[chart] === undefined){
+        //?     charCount[char]=0;
+        //? }
+
+        //? charCount[char] += 1;
+
+        //this is the shorthand version
+        charCount[char] = (charCount[char] || 0) + 1;
+        console.log(charCount)
+        // console.log(charCount)
+    }
+
+    for( let char of t){
+        console.log("TTT", charCount[char])
+        if(!charCount[char]){
+            return false
+        }
+        charCount[char]--;
+    }
+
+    return true;
+}
+
+
+// const isAnagram = (s,t) => {
+
+//     const news = s.split('').sort();
+//     const newt = t.split('').sort();
+
+//     if( news.join('') === newt.join('')){
+//         return true;
+//     }
+//     return false;
+// }
+
+
+
+
+const s = 'racecar';
+const t = "carrace";
+
+//* console.log(isAnagram(s, t))
+
+
+
 
 const findMinIndex = (arr) => arr.reduce((minIndex, currentValue, index, array) => {
     // console.log("minIndex", minIndex);
@@ -32,10 +151,10 @@ const performOperations = (nums, k, multiplier) => {
 };
 
 // Example usage
-const nums = [2,1,3,5,6];
+// const nums = [2,1,3,5,6];
 const k = 5;
 const multiplier = 2;
-console.log(performOperations(nums, k, multiplier));
+// console.log(performOperations(nums, k, multiplier));
 // performOperations(nums, k, multiplier)
 // console.log(findMinIndex(nums))
 
