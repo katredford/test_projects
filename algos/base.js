@@ -1,17 +1,71 @@
 
-const maxSubArray = (nums) => {
-    let currentSum = nums[0];
-    let maxSum = nums[0];
+// function bubbleSortString(str) {
+//     // Convert string to an array of characters
+//     let arr = str.split('');
+  
+//     // Bubble sort algorithm
+//     let n = arr.length;
+//     for (let i = 0; i < n - 1; i++) {
+//       for (let j = 0; j < n - i - 1; j++) {
+//         if (arr[j] > arr[j + 1]) {
+//           // Swap characters if they are in the wrong order
+//           let temp = arr[j];
+//           arr[j] = arr[j + 1];
+//           arr[j + 1] = temp;
+//         }
+//       }
+//     }
+  
+//     // Convert the sorted array back to a string
+//     return arr.join('');
+//   }
+  
+//   const bess = "racecar";
+//   console.log(bubbleSortString(bess));
 
-    for(let i=1; 1< nums.length; i++) {
+function bubbleSortString(str) {
 
+    let arr = str.split('');
+
+    let n = arr.length;
+
+    for(let i = 0; i < n-1; i++){
+        // console.log("first loop", arr[i])
+
+        for ( let j =0; j < n -i -1; j++){
+            console.log("array lenght minus the index minus 1",n-i-1)
+            console.log("second loop", j)
+            // if(arr[j] > arr[j + 1]) {
+            //     let temp = arr[j + 1];
+            //     console.log("temp", temp);
+            //     arr[j] = arr[j + 1];
+            //     console.log("temp again", temp);
+            //     arr[j + 1] = temp;
+            //     console.log("temp three", temp)
+            // }
+        }
     }
+
 }
 
 
+const string = 'hello world';
 
-const nums = [2, -3, 4, -2, 2, 1, -1, 4];
-console.log(maxSubArray(nums));
+bubbleSortString(string)
+
+// const maxSubArray = (nums) => {
+//     let currentSum = nums[0];
+//     let maxSum = nums[0];
+
+//     for(let i=1; 1< nums.length; i++) {
+
+//     }
+// }
+
+
+
+// const nums = [2, -3, 4, -2, 2, 1, -1, 4];
+// console.log(maxSubArray(nums));
 
 // function twoSum(nums, target) {
 
