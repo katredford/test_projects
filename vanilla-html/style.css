@@ -1,0 +1,17 @@
+header {
+    display: flex;
+   
+    background-color: greenyellow;
+    color: purple;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+nav {
+    display: flex;
+}
+
+ a { 
+    text-decoration: none;
+    margin:5px ;
+}

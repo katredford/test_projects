@@ -3,7 +3,7 @@ import letters from '../characters.json'
 
 const KeyBoard: React.FC = () => {
 
-    const handleKeyCLick = (char: string) => {
+    const handleKeyClick = (char: string) => {
         console.log(char);
     }
 
@@ -21,18 +21,18 @@ const KeyBoard: React.FC = () => {
 
                     <button
                         className="spKeys"
-                        onClick={() => handleKeyCLick("ENTER")}>
+                        onClick={() => handleKeyClick("ENTER")}>
                         ENTER
                     </button>
                     <button
                         className="spKeys"
-                        onClick={() => handleKeyCLick("BACK")}>
+                        onClick={() => handleKeyClick("BACK")}>
                         ←
                     </button>
                 </div>
                 <button
                         className="spKeys"
-                        onClick={() => handleKeyCLick("SKIP")}>
+                        onClick={() => handleKeyClick("SKIP")}>
                         SKIP
                     </button>
             </div>
