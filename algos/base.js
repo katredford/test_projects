@@ -1,3 +1,138 @@
+//? kadanes algorithm
+
+
+function maxSubArray(nums){
+   
+  let currentMax = nums[0];  
+  let globalMax = nums[0];   
+
+ 
+  for (let i = 1; i < nums.length; i++) {
+   
+    currentMax = Math.max(nums[i], currentMax + nums[i]);
+    
+
+    if (currentMax > globalMax) {
+      globalMax = currentMax;
+    }
+  }
+
+  return globalMax;  
+}
+
+slums = [2,-3,4,-2,2,1,-1,4]
+
+console.log(maxSubArray(slums))
+//!function twoSum(nums, target) {
+//   const adder = {}; 
+
+//   for (let i = 0; i < nums.length; i++) {
+//     const difference = target - nums[i];
+
+//     // Check if the difference exists in the hashmap using hasOwnProperty
+//     if (adder.hasOwnProperty(difference)) {
+//       // If it exists, return the indices of the two numbers
+//       return [adder[difference], i];
+//     }
+
+//     // Add the current number and its index to the hashmap
+//     adder[nums[i]] = i; 
+//   }
+
+//   // Return an empty array if no solution is found
+//   return [];
+// }
+// function twosSum(nums, target) {
+//     const adder = {}; 
+//         for(let i = 0; i < nums.length; i++) {
+//           const difference = target - nums[i];
+  
+//         //   console.log("adderdifference", adder[difference])
+//           // // Check if the difference exists in the hashmap
+//           if (adder[difference] !== undefined) {
+//               // If it exists, return the indices of the two numbers
+//               return [adder[difference], i];
+//           }
+  
+//           if( adder.hasOwnProperty(difference)){
+//               return [adder[difference], i]
+//           }
+//           adder[nums[i]] = i; 
+          
+//       }
+  
+//       // console.log("adder",adder);
+//       return [];
+//       }
+
+//       const a =[3,4,5,6]
+//       const b = 7;
+
+
+// function isAnAnagram(s, t) {
+//     // If strings have different lengths, they can't be anagrams
+//     if (s.length !== t.length) {
+//       return false;
+//     }
+  
+//     // Create a hashmap to count characters
+//     const charCount = {};
+  
+//     // Count each character in the first string
+//     for (let char of s) {
+//       charCount[char] = (charCount[char] || 0) + 1; // Increment count
+//     }
+  
+//     // Reduce the count for each character in the second string
+//     for (let char of t) {
+//       if (!charCount[char]) {
+//         return false; // If character is not found or count is zero, not an anagram
+//       }
+//       charCount[char]--; // Decrement count
+//     }
+  
+//     // At this point, all character counts should be 0
+//     for (let key in charCount) {
+//       if (charCount[key] !== 0) {
+//         return false;
+//       }
+//     }
+  
+//     return true; // Strings are anagrams
+//   }
+  
+//   // Test the function with the provided example
+//   const sta = "racecar";
+//   const ta = "carrace";
+  
+//   console.log(isAnAnagram(sta, ta));
+
+// function sortString(str) {
+//     let arr = str.split('');
+//     let n = arr.length;
+//     let swapped;
+
+//     do {
+//         swapped = false;
+//         for (let i =0; i < n-1; i++){
+//             if (arr[i] > arr[i + 1]) {
+//                 let temp = arr[i];
+//                 arr[i] = arr[i+1];
+//                 arr[i+1] = temp;
+//                 swapped = true;
+
+//             }
+//         }
+//         n--;
+//     }while(swapped);
+//     console.log("hello")
+//     return arr.join('');
+// }
+
+// const beep = "racecar"
+// const boop = "carrace"
+// console.log(sortString(beep));
+
 
 // function bubbleSortString(str) {
 //     // Convert string to an array of characters
@@ -51,7 +186,7 @@ function bubbleSortString(str) {
 
 const string = 'hello world';
 
-bubbleSortString(string)
+// bubbleSortString(string)
 
 // const maxSubArray = (nums) => {
 //     let currentSum = nums[0];
